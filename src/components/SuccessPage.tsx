@@ -1,7 +1,20 @@
+import { useEffect } from 'react';
 import { CheckCircle, Mail, Calendar, FileText } from 'lucide-react';
 import { Footer } from './Footer';
 
 export function SuccessPage() {
+  // Load Calendly script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white">
       {/* Animated background elements */}
@@ -88,24 +101,11 @@ export function SuccessPage() {
           <div className="bg-gray-800/40 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 shadow-2xl">
             <h2 className="text-xl font-semibold text-white mb-6 text-center">Book Your Strategy Call</h2>
 
-            {/*
-              TODO: Insert Calendly embed here
-              Replace this placeholder with your Calendly inline embed code
-              Example:
-              <div
-                className="calendly-inline-widget"
-                data-url="https://calendly.com/your-link/15min"
-                style={{ minWidth: '320px', height: '630px' }}
-              ></div>
-
-              Don't forget to uncomment the Calendly script in index.html:
-              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            */}
-            <div className="bg-gray-900/50 border border-dashed border-gray-600 rounded-xl p-12 text-center">
-              <Calendar className="w-12 h-12 text-gray-500 mx-auto mb-4" />
-              <p className="text-gray-400">[Calendly embed goes here]</p>
-              <p className="text-gray-500 text-sm mt-2">Replace this placeholder with your Calendly inline widget</p>
-            </div>
+            <div
+              className="calendly-inline-widget rounded-xl overflow-hidden"
+              data-url="https://calendly.com/noah-rizo/30min?hide_gdpr_banner=1&hide_event_type_details=1&primary_color=FF6B35"
+              style={{ minWidth: '320px', height: '700px' }}
+            />
           </div>
         </div>
       </main>
