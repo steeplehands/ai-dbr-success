@@ -103,7 +103,7 @@ export function SuccessPage() {
 
             <div
               className="calendly-inline-widget rounded-xl overflow-hidden"
-              data-url="https://calendly.com/noah-rizo/30min?hide_gdpr_banner=1&hide_event_type_details=1&primary_color=FF6B35"
+              data-url="https://calendly.com/noah-rizo/onboarding-call-clone?hide_gdpr_banner=1&hide_event_type_details=1&primary_color=FF6B35"
               style={{ minWidth: '320px', height: '700px' }}
             />
           </div>
