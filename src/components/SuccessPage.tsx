@@ -68,7 +68,7 @@ export function SuccessPage() {
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-1">
                     <Calendar className="w-5 h-5 text-orange-500" />
-                    <span className="font-medium text-white">Book your strategy call below (15 mins)</span>
+                    <span className="font-medium text-white">Book your strategy call below</span>
                   </div>
                   <p className="text-gray-400 text-sm">Pick a time that works for you to discuss your campaign.</p>
                 </div>
