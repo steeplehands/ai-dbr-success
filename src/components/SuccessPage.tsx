@@ -92,7 +92,7 @@ export function SuccessPage() {
             {/* Subtext */}
             <div className="mt-8 pt-6 border-t border-gray-700">
               <p className="text-gray-300 text-center">
-                We'll have your first 100 messages ready to send within <span className="text-orange-400 font-semibold">48 hours</span> of our call.
+                We'll have your first 200 messages ready to send within <span className="text-orange-400 font-semibold">72 hours</span> of our call.
               </p>
             </div>
           </div>
